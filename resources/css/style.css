@@ -1,41 +1,129 @@
 /* Universal styles */
 
+a {
+  color: black;
+  text-decoration: none;
+}
+
+h1 {
+  font-weight: bold;
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  padding: 2rem 0;
+}
+
+h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding-bottom: 0.5rem;
+}
+
 html {
   font-size: 16px;
   font-family: verdana;
 }
 
 .container {
-  margin: auto;
+  margin: 0 auto;
   max-width: 1200px;
 }
 
-.odd {
-  background: yellow;
+.even {
+  background: purple;
 }
 
-.even {
-  background-color: purple;
+.odd {
+  background: aquamarine;
 }
+
+.spacing {
+  margin: 1rem 0;
+}
+
+.centre {
+  margin: 0 auto;
+}
+
+/* Column containers */
+
+.col1 {
+  align-items: flex-start;
+  border: 2px solid yellow;
+  display: flex;
+  flex-direction: column;
+  margin-right: 1.5rem;
+  width: 60%;
+}
+
+.col2 {
+  align-items: center;
+  /* border: 5px solid green; */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 40%;
+}
+
+/* Article snippets */
+
+.snippet {
+  align-items: center;
+  /* border: 2px solid pink; */
+  display: flex;
+  padding: 1rem;
+}
+
+.snippet img {
+  width: 35%;
+  margin-right: 1rem;
+}
+
+.snippet p {
+  padding-bottom: 0.75rem;
+}
+
+.snippet a {
+  color: blue;
+}
+
+/* #top-snippet {
+  padding-top: 0;
+} */
+
 /* Nav bar */
 
 .nav {
+  background: gray;
+  height: 4rem;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+nav {
   align-items: center;
   background-color: gray;
-  border: 2px solid red;
   display: inline-flex;
   justify-content: space-between;
   height: 4rem;
-  /* position: fixed; */
   left: 0;
+  margin: auto;
+  max-width: 1200px;
+  position: fixed;
   right: 0;
+  top: 0;
   width: 100%;
 }
 
 #logo {
   align-items: center;
   display: inline-flex;
-  height: 2rem;
+  max-height: 2rem;
+  text-transform: uppercase;
 }
 
 #logo span {
@@ -51,7 +139,7 @@ html {
 }
 
 #links ul li {
-  display: inline-flex;
+  display: inline;
   list-style: none;
   padding-left: 1rem;
 }
@@ -59,5 +147,59 @@ html {
 /* First section */
 
 .top-section {
+  align-items: center;
+  display: flex;
+  justify-content: flex-start;
   margin-top: 4rem;
+  padding: 2rem 1.5rem;
+}
+
+#hero-image {
+  width: 60%;
+}
+
+#hero-image img {
+  margin-right: 24px;
+  width: 100%;
+}
+
+#hero-copy {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin-left: 24px;
+  width: 30%;
+}
+
+#button {
+  background: black;
+  color: white;
+  padding: 0.5rem 30%;
+}
+
+/* Infomration section */
+
+.articles {
+  align-items: flex-start;
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem 1.5rem;
+}
+
+.col1 .title {
+  padding-bottom: 1.5rem;
+}
+
+.snippet:last-child {
+  background-color: gray;
+}
+
+#big-image {
+  width: 100%;
+}
+
+#quote {
+  font-size: 0.8rem;
+  font-weight: bold;
 }
