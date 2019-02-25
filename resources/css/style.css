@@ -1,0 +1,63 @@
+/* Universal styles */
+
+html {
+  font-size: 16px;
+  font-family: verdana;
+}
+
+.container {
+  margin: auto;
+  max-width: 1200px;
+}
+
+.odd {
+  background: yellow;
+}
+
+.even {
+  background-color: purple;
+}
+/* Nav bar */
+
+.nav {
+  align-items: center;
+  background-color: gray;
+  border: 2px solid red;
+  display: inline-flex;
+  justify-content: space-between;
+  height: 4rem;
+  /* position: fixed; */
+  left: 0;
+  right: 0;
+  width: 100%;
+}
+
+#logo {
+  align-items: center;
+  display: inline-flex;
+  height: 2rem;
+}
+
+#logo span {
+  font-weight: bold;
+}
+
+#logo img {
+  max-height: 2rem;
+}
+
+#links {
+  padding-right: 1.5rem;
+}
+
+#links ul li {
+  display: inline-flex;
+  list-style: none;
+  padding-left: 1rem;
+}
+
+/* First section */
+
+.top-section {
+  margin-top: 4rem;
+}
