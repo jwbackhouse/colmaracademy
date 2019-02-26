@@ -13,7 +13,6 @@ h1 {
 h2 {
   font-size: 2rem;
   font-weight: bold;
-  padding: 2rem 0;
 }
 
 h3 {
@@ -27,6 +26,9 @@ html {
   font-family: verdana;
 }
 
+p {
+  line-height: 1.4;
+}
 .container {
   margin: 0 auto;
   max-width: 1200px;
@@ -46,6 +48,7 @@ html {
 
 .centre {
   margin: 0 auto;
+  padding-bottom: 2rem;
 }
 
 /* Column containers */
@@ -89,10 +92,6 @@ html {
 .snippet a {
   color: blue;
 }
-
-/* #top-snippet {
-  padding-top: 0;
-} */
 
 /* Nav bar */
 
@@ -178,7 +177,7 @@ nav {
   padding: 0.5rem 30%;
 }
 
-/* Infomration section */
+/* Articles section */
 
 .articles {
   align-items: flex-start;
@@ -187,8 +186,13 @@ nav {
   padding: 2rem 1.5rem;
 }
 
-.col1 .title {
+.col1 h2 {
   padding-bottom: 1.5rem;
+  padding-top: 2rem;
+}
+
+.snippet:first-child {
+  padding-top: 0;
 }
 
 .snippet:last-child {
@@ -202,4 +206,49 @@ nav {
 #quote {
   font-size: 0.8rem;
   font-weight: bold;
+}
+
+/* Courses section */
+
+.courses {
+  border: 1px solid yellow;
+  display: flex;
+  flex-direction: column;
+  align-items: : center;
+  padding: 2rem 3.5rem 1.5rem 3.5rem;
+}
+
+.courses .centre {
+  padding-bottom: 1.5rem;
+}
+
+.course-holder {
+  /* align-items: stretch; */
+  display: inline-flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+}
+
+.course-box {
+  align-items: flex-start;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin: 0.5rem 1rem;
+  max-width: 30%;
+}
+
+.course-box img {
+  width: 100%;
+}
+
+.course-copy {
+  padding: 1rem 1rem 1.5rem 1rem;
+}
+
+.course-cat {
+  padding: 0.5rem 0;
+  text-transform: uppercase;
 }
