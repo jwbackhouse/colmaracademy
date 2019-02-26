@@ -64,7 +64,7 @@ p {
 
 .col2 {
   align-items: center;
-  /* border: 5px solid green; */
+  border: 5px solid green;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -93,6 +93,10 @@ p {
   color: blue;
 }
 
+.snippet:first-child {
+  padding-top: 0;
+}
+
 /* Nav bar */
 
 .nav {
@@ -106,16 +110,18 @@ p {
 nav {
   align-items: center;
   background-color: gray;
+  border: 1px solid white;
+  box-sizing: border-box;
   display: inline-flex;
   justify-content: space-between;
   height: 4rem;
   left: 0;
   margin: auto;
   max-width: 1200px;
+  padding: 0 1.5rem;
   position: fixed;
   right: 0;
   top: 0;
-  width: 100%;
 }
 
 #logo {
@@ -133,10 +139,6 @@ nav {
   max-height: 2rem;
 }
 
-#links {
-  padding-right: 1.5rem;
-}
-
 #links ul li {
   display: inline;
   list-style: none;
@@ -147,6 +149,7 @@ nav {
 
 .top-section {
   align-items: center;
+  border: 1px solid pink;
   display: flex;
   justify-content: flex-start;
   margin-top: 4rem;
@@ -181,21 +184,18 @@ nav {
 
 .articles {
   align-items: flex-start;
+  border: 1px solid white;
   display: flex;
   justify-content: space-between;
   padding: 2rem 1.5rem;
 }
 
-.col1 h2 {
+.articles h2 {
   padding-bottom: 1.5rem;
   padding-top: 2rem;
 }
 
-.snippet:first-child {
-  padding-top: 0;
-}
-
-.snippet:last-child {
+.articles .snippet:last-child {
   background-color: gray;
 }
 
@@ -214,7 +214,7 @@ nav {
   border: 1px solid yellow;
   display: flex;
   flex-direction: column;
-  align-items: : center;
+  align-items: center;
   padding: 2rem 3.5rem 1.5rem 3.5rem;
 }
 
@@ -251,4 +251,56 @@ nav {
 .course-cat {
   padding: 0.5rem 0;
   text-transform: uppercase;
+}
+
+/* Thesis section */
+
+.thesis {
+  border: 1px solid red;
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 2rem 1.5rem;
+}
+
+.thesis-holder {
+  border: 1px solid pink;
+  display: flex;
+}
+
+.thesis video {
+  width: 100%;
+}
+
+.thesis .col1 h3 {
+  padding: 1.5rem 0 .5rem 0;
+}
+
+.thesis .snippet:first-child {
+  background: gray;
+}
+
+/* Footer */
+
+footer {
+  background: gray;
+  display: flex;
+  width: 100%;
+}
+
+#footer {
+  background-color: gray;
+  box-sizing: border-box;
+  display: inline-flex;
+  justify-content: space-between;
+  margin: auto;
+  max-width: 1200px;
+  padding: 1rem 1.5rem;
+  width: 100%;
+}
+
+#footer-links ul li {
+  display: inline;
+  padding-left: .5rem;
 }
