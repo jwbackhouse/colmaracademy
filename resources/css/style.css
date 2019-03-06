@@ -1,45 +1,51 @@
 /* Universal styles */
 
 a {
-  color: black;
+  color: #C1836A;
   text-decoration: none;
 }
 
 h1 {
-  font-weight: bold;
+  color: #796466;
+  font-family: muli;
+  font-weight: 900;
   font-size: 2.5rem;
 }
 
 h2 {
+  color: #796466;
+  font-family: muli;
   font-size: 2rem;
-  font-weight: bold;
+  font-weight: 700;
 }
 
 h3 {
+  color: #C1836A;
+  font-family: muli;
   font-size: 1.5rem;
-  font-weight: bold;
-  padding-bottom: 0.5rem;
+  padding-bottom: .5rem;
 }
 
 html {
   font-size: 16px;
-  font-family: verdana;
+  font-family: "Playfair Display";
 }
 
 p {
   line-height: 1.4;
 }
+
 .container {
   margin: 0 auto;
   max-width: 1200px;
 }
 
 .even {
-  background: purple;
+  background: #FBFCF3;
 }
 
 .odd {
-  background: aquamarine;
+  background: #FFF;
 }
 
 .spacing {
@@ -48,14 +54,16 @@ p {
 
 .centre {
   margin: 0 auto;
-  padding-bottom: 2rem;
+}
+
+.mobile {
+  display: none;
 }
 
 /* Column containers */
 
 .col1 {
   align-items: flex-start;
-  border: 2px solid yellow;
   display: flex;
   flex-direction: column;
   margin-right: 1.5rem;
@@ -64,7 +72,6 @@ p {
 
 .col2 {
   align-items: center;
-  border: 5px solid green;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -75,7 +82,6 @@ p {
 
 .snippet {
   align-items: center;
-  /* border: 2px solid pink; */
   display: flex;
   padding: 1rem;
 }
@@ -86,21 +92,27 @@ p {
 }
 
 .snippet p {
-  padding-bottom: 0.75rem;
+  padding-bottom: .75rem;
 }
 
 .snippet a {
-  color: blue;
+  color: #C1836A;
+  font-family: muli;
 }
 
-.snippet:first-child {
-  padding-top: 0;
+.snippet a:hover {
+  color: #796466;
+}
+
+.mobile-snippet {
+  display: none;
 }
 
 /* Nav bar */
 
-.nav {
-  background: gray;
+#nav {
+  background: #324152;
+  font-family: muli;
   height: 4rem;
   position: fixed;
   top: 0;
@@ -109,8 +121,7 @@ p {
 
 nav {
   align-items: center;
-  background-color: gray;
-  border: 1px solid white;
+  background-color: #324152;
   box-sizing: border-box;
   display: inline-flex;
   justify-content: space-between;
@@ -132,10 +143,12 @@ nav {
 }
 
 #logo span {
-  font-weight: bold;
+  font-weight: 900;
 }
 
 #logo img {
+  filter: invert(1);
+  margin-right: 1rem;
   max-height: 2rem;
 }
 
@@ -145,11 +158,44 @@ nav {
   padding-left: 1rem;
 }
 
+#nav a {
+  color: #FFF;
+}
+
+#nav a:hover {
+  color: #617E9E;
+  transition: color linear 50ms;
+}
+
+.mobile-nav {
+  display: none;
+  filter: invert(1);
+}
+
+@media only screen and (max-width: 670px) {
+  #links {
+    display: none;
+  }
+
+  nav {
+    justify-content: space-between;
+  }
+
+  .mobile-nav {
+    display: inline-block;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+    #logo p {
+      display: none;
+    }
+}
+
 /* First section */
 
-.top-section {
+#top-section {
   align-items: center;
-  border: 1px solid pink;
   display: flex;
   justify-content: flex-start;
   margin-top: 4rem;
@@ -160,43 +206,74 @@ nav {
   width: 60%;
 }
 
-#hero-image img {
-  margin-right: 24px;
-  width: 100%;
-}
-
 #hero-copy {
   align-items: flex-start;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  margin-left: 24px;
+  padding-left: 1.5rem;
+  font-weight: bold;
   width: 30%;
 }
 
 #button {
-  background: black;
-  color: white;
-  padding: 0.5rem 30%;
+  background: #DEA677;
+  border-radius: 4rem;
+  color: black;
+  font-family: muli;
+  font-weight: 700;
+  padding: .75rem 30%;
+}
+
+#button:hover {
+  background: #796466;
+  color: #DEA677;
+  transition: all ease 100ms;
+}
+
+@media only screen and (max-width: 770px) {
+  #top-section {
+    flex-direction: column;
+    padding: 0;
+  }
+
+  #hero-image {
+    max-height: 20rem;
+    object-fit: cover;
+    object-position: left top;
+    width: 100%;
+  }
+
+  #hero-copy {
+    align-items: stretch;
+    padding: 0 1rem;
+    width: inherit;
+  }
+
+  #button {
+    display: block;
+    margin: .5rem 0 2rem 0;
+    text-align: center;
+  }
+
 }
 
 /* Articles section */
 
-.articles {
+#articles {
   align-items: flex-start;
-  border: 1px solid white;
   display: flex;
   justify-content: space-between;
   padding: 2rem 1.5rem;
 }
 
-.articles h2 {
+#articles h2 {
   padding-bottom: 1.5rem;
   padding-top: 2rem;
 }
 
-.articles .snippet:last-child {
-  background-color: gray;
+#articles .snippet:last-child {
+  background-color: #AFCDE8;
 }
 
 #big-image {
@@ -204,29 +281,99 @@ nav {
 }
 
 #quote {
-  font-size: 0.8rem;
+  font-size: .8rem;
   font-weight: bold;
+}
+
+@media only screen and (max-width: 970px) {
+  #articles {
+    flex-direction: column;
+  }
+
+  #articles .col1,
+  #articles .col2 {
+    width: 100%;
+  }
+
+  #articles .col1 {
+    margin-bottom: 1rem;
+  }
+
+  #articles .col2 {
+    margin: 0;
+  }
+
+  .snippet {
+    border-top: 1px solid #324152;
+    width: 100%;
+  }
+
+  .snippet:last-child {
+    border-bottom: 1px solid #324152;
+  }
+}
+
+@media only screen and (max-width: 670px) {
+  #articles {
+    padding: 1rem 1rem 2rem 1rem;
+  }
+
+  #articles .col1 {
+    display: none;
+  }
+
+  #articles .col2 {
+    width: 100%;
+  }
+
+  .snippet {
+    align-items: flex-start;
+    border: none;
+    flex-direction: column;
+    padding: 0 1rem;
+    margin-bottom: 4rem;
+  }
+
+  .snippet:last-child {
+    border-bottom: none;
+  }
+
+  .snippet img {
+    margin: 0 0 1rem 0;
+    width: 100%;
+  }
+
+  .snippet:last-child {
+    margin-bottom: 1rem;
+  }
+
+  .desktop-snippet {
+    display: none;
+  }
+
+  .mobile-snippet {
+    display: inline-block;
+  }
+
+  #articles .snippet:last-child {
+    background: inherit;
+  }
 }
 
 /* Courses section */
 
-.courses {
-  border: 1px solid yellow;
+#courses {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 2rem 3.5rem 1.5rem 3.5rem;
+  padding: 2rem 3.5rem 0 3.5rem;
 }
 
-.courses .centre {
-  padding-bottom: 1.5rem;
-}
-
-.course-holder {
-  /* align-items: stretch; */
+#course-holder {
   display: inline-flex;
   flex-wrap: wrap;
   justify-content: center;
+  margin-top: 2rem;
   width: 100%;
 }
 
@@ -236,7 +383,7 @@ nav {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  margin: 0.5rem 1rem;
+  margin: 0 1rem 2rem 1rem;
   max-width: 30%;
 }
 
@@ -244,19 +391,69 @@ nav {
   width: 100%;
 }
 
+.course-box a:hover {
+  color: #796466;
+}
+
 .course-copy {
   padding: 1rem 1rem 1.5rem 1rem;
 }
 
 .course-cat {
-  padding: 0.5rem 0;
+  padding: .5rem 0;
   text-transform: uppercase;
+}
+
+@media only screen and (max-width: 1090px) {
+  #courses {
+    padding: 2rem .5rem;
+  }
+}
+
+@media only screen and (max-width: 990px) {
+  #courses {
+    padding: 2rem 0;
+  }
+}
+
+@media only screen and (max-width: 770px) {
+  #courses {
+    padding: 2rem 0;
+  }
+
+  #course-holder {
+    display: block;
+    margin-top: 1rem
+  }
+
+  #courses h3 {
+    padding: 0;
+  }
+
+  .course-box {
+    background: #324152;
+    margin-bottom: .5rem;
+    max-width: none;
+    padding: 1rem 1rem 1rem 1rem;
+  }
+
+  .course-box a:hover {
+    color: #fff;
+  }
+
+  .course-copy {
+    padding: 1rem;
+  }
+
+  .course-box img,
+  .course-box p {
+    display: none;
+  }
 }
 
 /* Thesis section */
 
-.thesis {
-  border: 1px solid red;
+#thesis {
   align-items: flex-start;
   display: flex;
   flex-direction: column;
@@ -264,35 +461,67 @@ nav {
   padding: 2rem 1.5rem;
 }
 
-.thesis-holder {
-  border: 1px solid pink;
+#thesis-holder {
   display: flex;
+  margin-top: 2rem;
 }
 
-.thesis video {
+#thesis a:hover {
+  color: #796466;
+}
+
+#thesis video {
   width: 100%;
 }
 
-.thesis .col1 h3 {
+#thesis .col1 h3 {
   padding: 1.5rem 0 .5rem 0;
 }
 
-.thesis .snippet:first-child {
-  background: gray;
+#thesis .snippet:first-child {
+  background: #AFCDE8;
+}
+
+@media only screen and (max-width: 990px) {
+  #thesis .col1 {
+    margin-right: 0;
+    width: 100%;
+  }
+
+  #thesis .col2 {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 670px) {
+  #thesis {
+    padding: 2rem 0 1.5rem 0;
+  }
+
+  #thesis-holder {
+    margin-top: 1rem;
+  }
+
+  #thesis h3,
+  #thesis p {
+    display: none;
+  }
 }
 
 /* Footer */
 
 footer {
-  background: gray;
+  background: #324152;
   display: flex;
   width: 100%;
 }
 
 #footer {
-  background-color: gray;
+  background-color: #324152;;
   box-sizing: border-box;
+  color: #FFF;
   display: inline-flex;
+  font-size: .75rem;
   justify-content: space-between;
   margin: auto;
   max-width: 1200px;
@@ -303,4 +532,19 @@ footer {
 #footer-links ul li {
   display: inline;
   padding-left: .5rem;
+}
+
+#footer-links a {
+  color: #FFF;
+}
+
+#footer-links a:hover {
+  color: #617E9E;
+  transition: color linear 50ms;
+}
+
+@media only screen and (max-width: 670px) {
+  #footer-links {
+    display: none;
+  }
 }
